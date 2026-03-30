@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volunteer Portal | HomeHaven</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#004e5b",
+              "inverse-surface": "#2f3130",
+              "tertiary-fixed-dim": "#ffb598",
+              "primary-fixed": "#a9edff",
+              "surface-bright": "#faf9f8",
+              "inverse-on-surface": "#f1f0f0",
+              "secondary-fixed-dim": "#8ad4cc",
+              "on-tertiary-fixed-variant": "#763314",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#2d7d8e",
+              "surface-container-high": "#e9e8e7",
+              "surface-dim": "#dadad9",
+              "surface-variant": "#e3e2e1",
+              "primary-fixed-dim": "#87d2e4",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#3f484b",
+              "surface-container-highest": "#e3e2e1",
+              "on-secondary-fixed-variant": "#00504b",
+              "tertiary-fixed": "#ffdbce",
+              "outline": "#6f797c",
+              "secondary-container": "#a3ede5",
+              "surface-container": "#eeeeed",
+              "inverse-primary": "#87d2e4",
+              "on-surface": "#1a1c1c",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#001f26",
+              "secondary-fixed": "#a6f0e8",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#370e00",
+              "secondary": "#176963",
+              "surface": "#faf9f8",
+              "on-background": "#1a1c1c",
+              "on-secondary-container": "#1e6e68",
+              "surface-tint": "#086878",
+              "primary": "#006474",
+              "tertiary": "#8f4626",
+              "surface-container-low": "#f4f3f2",
+              "on-secondary-fixed": "#00201e",
+              "on-primary-container": "#f3fcff",
+              "on-tertiary-container": "#fff9f8",
+              "outline-variant": "#bec8cb",
+              "tertiary-container": "#ad5e3c",
+              "background": "#faf9f8",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-transition {
+        transition: background-color 0.3s ease;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shared Component -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm shadow-stone-900/5 dark:shadow-none tonal-transition">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-teal-800 dark:text-teal-400" style="font-size: 28px;">home</span>
+<h1 class="text-2xl font-serif font-bold text-teal-900 dark:text-teal-100">HomeHaven</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-teal-600 font-medium transition-colors" href="#">Impact Reports</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-teal-600 font-medium transition-colors" href="#">Shelter Locator</a>
+<a class="text-teal-700 dark:text-teal-300 font-bold border-b-2 border-teal-700 pb-1" href="#">Volunteer Portal</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-semibold active:scale-95 duration-150 ease-in-out shadow-md">
+                    Donate
+                </button>
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 mb-16">
+<div class="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<h2 class="font-headline text-5xl md:text-7xl text-on-surface leading-tight mb-6">
+                        Small acts, <span class="italic text-primary">lasting sanctuary.</span>
+</h2>
+<p class="font-body text-xl text-on-surface-variant max-w-xl mb-8 leading-relaxed">
+                        Become the heartbeat of our community. Your time and talents provide more than just help—they provide hope for those seeking a place to call home.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:opacity-90 transition-all" href="#opportunities">
+                            View Opportunities <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative mt-8 lg:mt-0">
+<div class="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-surface-container-high">
+<img alt="Volunteer Team" class="w-full h-[500px] object-cover" data-alt="diverse group of smiling volunteers wearing teal aprons preparing fresh meals in a bright modern community kitchen environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzk_RxocxfxJvGAtE9NGc4ppdwyNrNKnZlGKoBTYAZjsPYffqlWlN-m2elO3MxaRz0AH53CimeNk5r-L3H-CDhQ5Xmp4IXrbeB7npbbdLQm2b0wDK13tckq8Wsa77w5hTSX047Ez_QictvWAn9lJQ7Dp3zLfb369cd0VEohvM9NtcyziNVkpeYpHI1cjOdNC8mGKRqcD1pVowmQE9MVWly03rPYKidlITqBY_Eiyn8EaW0ySPQCQ4QQGWe3xQasIJcJ7p_s2lbZ-c"/>
+</div>
+<div class="absolute -bottom-6 -left-12 hidden md:block bg-surface-container-lowest p-6 rounded-2xl shadow-xl max-w-xs transform -rotate-3 border border-outline-variant/10">
+<p class="font-headline text-2xl text-tertiary mb-2 italic">"A true home is built by many hands."</p>
+<p class="font-label text-sm text-on-surface-variant">— Maria, Lead Coordinator</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Impact Bar -->
+<section class="bg-surface-container-low py-12 mb-20">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<p class="text-4xl font-headline font-bold text-primary mb-1">450+</p>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Active Volunteers</p>
+</div>
+<div class="text-center border-l border-outline-variant/20">
+<p class="text-4xl font-headline font-bold text-primary mb-1">12k+</p>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Meals Served</p>
+</div>
+<div class="text-center border-l border-outline-variant/20">
+<p class="text-4xl font-headline font-bold text-primary mb-1">85%</p>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Placement Rate</p>
+</div>
+<div class="text-center border-l border-outline-variant/20">
+<p class="text-4xl font-headline font-bold text-primary mb-1">24/7</p>
+<p class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Open Sanctuary</p>
+</div>
+</div>
+</section>
+<!-- Opportunities Grid -->
+<section class="max-w-7xl mx-auto px-6 mb-24" id="opportunities">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="max-w-2xl">
+<span class="text-tertiary font-bold tracking-widest text-sm uppercase mb-4 block">Current Needs</span>
+<h3 class="font-headline text-4xl text-on-surface">Ways you can make an impact today.</h3>
+</div>
+<div class="flex gap-4">
+<button class="p-3 rounded-full border border-outline hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+<p class="font-label text-on-surface-variant text-sm self-center">Showing 6 Open Roles</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Kitchen Help -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/5 flex flex-col h-full group hover:shadow-xl transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 32px;">restaurant</span>
+</div>
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-3">Kitchen Help</h4>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                        Join our culinary team in preparing nutritious, warm meals for our residents. No professional experience required—just a heart for service and a willingness to learn.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2 text-sm font-label text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">schedule</span> 4hr shifts
+                        </div>
+<a class="bg-surface-container-highest text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-all" href="#apply">Sign Up</a>
+</div>
+</div>
+<!-- Mentoring -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/5 flex flex-col h-full group hover:shadow-xl transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 32px;">school</span>
+</div>
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-3">Mentoring</h4>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                        Provide guidance, career advice, or simply a listening ear to individuals transitioning into independent living. Help build the confidence needed for a fresh start.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2 text-sm font-label text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">event</span> Weekly commitment
+                        </div>
+<a class="bg-surface-container-highest text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-all" href="#apply">Sign Up</a>
+</div>
+</div>
+<!-- Supply Sorting -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/5 flex flex-col h-full group hover:shadow-xl transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 32px;">inventory_2</span>
+</div>
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-3">Supply Sorting</h4>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                        Help us organize donations of clothing, toiletries, and essential household items. Ensure our community has access to what they need, when they need it.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2 text-sm font-label text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span> On-site / Warehouse
+                        </div>
+<a class="bg-surface-container-highest text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-all" href="#apply">Sign Up</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Section -->
+<section class="max-w-5xl mx-auto px-6 mb-24" id="apply">
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-inner">
+<div class="p-12 lg:p-16">
+<h3 class="font-headline text-4xl text-on-surface mb-4">Start your journey.</h3>
+<p class="text-on-surface-variant mb-8">Tell us a bit about yourself and which role interests you most. We'll reach out within 48 hours.</p>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block font-label text-sm text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block font-label text-sm text-on-surface-variant ml-1">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary" placeholder="jane@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-sm text-on-surface-variant ml-1">Preferred Role</label>
+<select class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary appearance-none">
+<option>Kitchen Help</option>
+<option>Mentoring</option>
+<option>Supply Sorting</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-sm text-on-surface-variant ml-1">Why do you want to volunteer?</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary" placeholder="I want to give back to my community..." rows="3"></textarea>
+</div>
+<button class="w-full bg-tertiary text-on-tertiary py-4 rounded-xl font-bold text-lg shadow-lg hover:brightness-110 active:scale-95 transition-all" type="submit">
+                            Submit Application
+                        </button>
+</form>
+</div>
+<div class="hidden lg:block relative">
+<img alt="Volunteer Connection" class="absolute inset-0 w-full h-full object-cover" data-alt="warm sunlit room where two people are sitting comfortably on soft furniture having a supportive conversation with coffee mugs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgReAgBacKADtJ-JzurOAN3nodwPjeZuBC8cNiL5tMmd-JRymXMXxhjO6TuodMQj97j55coTYwuikbKMNM2Exch6Z7VF66GMwX0nVPqtE6i_dMV5lm1h8vX6HddXQWEudz2Af_oZZtuuHQ5eACVe7qYhwm1arT0PYXm6sGfw-MUtOfG-dAtw5IwKo6CAlYsc9fjDPioKUTNS1G2S0psaWjkw2NXxXeCv6-DlnlLfvPx3o1SNQhGCp5rMSU82jIqgQnslUHHcNaj2g"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8 tonal-shift from surface to surface-container-low border-t border-stone-200/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<h4 class="font-serif text-xl text-teal-800 dark:text-teal-200">HomeHaven</h4>
+<p class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400 max-w-xs">
+                    © 2024 HomeHaven. Providing warmth and sanctuary for all.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400 hover:text-teal-600 cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-teal-600 cursor-pointer transition-colors">favorite</span>
+<span class="material-symbols-outlined text-stone-400 hover:text-teal-600 cursor-pointer transition-colors">share</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2 flex flex-col">
+<a class="text-stone-500 dark:text-stone-400 hover:text-teal-600 dark:hover:text-teal-300 transition-all text-sm" href="#">Impact Reports</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-teal-600 dark:hover:text-teal-300 transition-all text-sm" href="#">Shelter Locator</a>
+<a class="text-orange-600 dark:text-orange-400 underline text-sm" href="#">Volunteer Portal</a>
+</div>
+<div class="space-y-2 flex flex-col">
+<a class="text-stone-500 dark:text-stone-400 hover:text-teal-600 dark:hover:text-teal-300 transition-all text-sm" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-teal-600 dark:hover:text-teal-300 transition-all text-sm" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="bg-surface-container rounded-2xl p-6">
+<p class="font-headline text-lg text-teal-900 mb-2">Subscribe to our Sanctuary Stories</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-lowest border-none rounded-lg flex-grow text-sm py-2 px-3" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-lg">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
